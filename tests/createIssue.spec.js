@@ -11,12 +11,12 @@ test('Create Issue Test', async ({ page }) => {
 
   await loginPage.goto();
   await loginPage.login("4076", "Vishnu@1915");
-
   await dashboardPage.navigateToBoard();
   await dashboardPage.clickCreateIssue();
 
   await createIssuePage.createTask();
 
   await createIssuePage.cancelIssue();
+  await page.pause();
 
 });
