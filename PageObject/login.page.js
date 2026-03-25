@@ -11,9 +11,9 @@ class LoginPage {
     await this.page.goto("https://seasiaconnect.com/login");
   }
 
-  async login(user, pass) {
-    await this.username.fill(user);
-    await this.password.fill(pass);
+  async login(user) {
+    await this.username.fill(user.username);
+    await this.password.fill(user.password);
     await this.rememberMe.click();
     await this.loginBtn.click();
   }
