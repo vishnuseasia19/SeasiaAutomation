@@ -23,10 +23,10 @@ test('Task inProgress ', async({page})=>
   await createIssuePage.createTask();
 
   await createIssuePage.cancelIssue();
-  await inProgressPage.source.click();
+ await inProgressPage.source.click();
   await inProgressPage.sprintBacklogBtn.click();
   await inProgressPage.InProgressOption.click();
-  await inProgressPage.goBackBtn.click();
+ await inProgressPage.goBackBtn.click();
 
   await expect(
   page.locator("//div[@data-rbd-droppable-id='In Progress']")
