@@ -8,6 +8,9 @@ class dashboardPage{
     this.boardLink = page.getByRole("link", { name: "Board", exact: true });
     this.createIssueBtn = page.getByRole("button", { name: "Create Issues", exact: true });
   }
+//   async open() {
+//   await this.page.goto('/dashboard');
+// }
   async navigateToBoard() {
     await this.menuBtn.click();
     await this.projectManagement.click();
