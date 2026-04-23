@@ -1,3 +1,5 @@
+const { expect } = require('@playwright/test');
+
 class attendancePage{
     constructor(page)
     {
@@ -55,7 +57,39 @@ class attendancePage{
     // 🔹 Reason
     this.reasonDropdown = page.getByRole('combobox', { name: 'Select Reason' });
     this.reasonOption = (option) => page.getByRole('option', { name: option });
+
+
+     // Navigation
+    this.reportManagementBtn = page.getByRole('button', { name: 'Report Management' });
+    this.userAttendanceLink = page.getByRole('link', { name: 'User Attendance' });
+
+    // Table
+    this.table = page.locator("table[aria-label='simple table']");
+    this.rows = this.table.locator('tbody tr');
+
     }
+     async navigateToAttendance() {
+    await this.reportManagementBtn.click();
+    await this.userAttendanceLink.click();
+    await this.table.waitFor({ state: 'visible' });
+  }
+  // Get specific cell from row
+  getCell(row, index) {
+    return row.locator('td').nth(index);
+  }
+
+  // Get row by date
+  getRowByDate(date) {
+    return this.table.getByRole('row', { name: date });
+  }
+   //  Validate status
+  async validateStatus(date, expectedStatus) {
+    const row = this.getRowByDate(date);
+
+    await expect(row).toBeVisible();
+    await expect(this.getCell(row, 3)).toHaveText(expectedStatus);
+  }
+
 
   // 🔹 Actions
   async clickApplyAttendance() {
