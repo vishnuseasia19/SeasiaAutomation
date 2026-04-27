@@ -1,24 +1,24 @@
-// const { test, expect } = require('@playwright/test');
-// const AttendancePage = require('../../pages/projectManagement/attendence.page.js');
-// const DashboardPage = require('../../pages/projectManagement/dashboard.page.js');
+const { test, expect } = require('@playwright/test');
+const AttendancePage = require('../../pages/projectManagement/attendence.page.js');
+const DashboardPage = require('../../pages/projectManagement/dashboard.page.js');
 
-// test('attendancePage verification', async ({ page }) => {
+test('attendancePage verification', async ({ page }) => {
 
-//   const dashboardPage = new DashboardPage(page);
-//   const attendancePage = new AttendancePage(page);
+  const dashboardPage = new DashboardPage(page);
+  const attendancePage = new AttendancePage(page);
 
-//   await page.goto('/dashboard');
+  await page.goto('/dashboard');
 
-//   // Open sidebar (use ONLY one)
-//   await dashboardPage.menuBtn.click();
+  // Open sidebar (use ONLY one)
+  await dashboardPage.menuBtn.click();
 
-//   // Navigate to attendance page
-//   await attendancePage.navigateToAttendance();
+  // Navigate to attendance page
+  await attendancePage.navigateToAttendance();
 
-//   // Validate
-//   await attendancePage.validateStatus('01 Apr, 2026', 'Present');
+  // Validate
+  await attendancePage.validateStatus('01 Apr, 2026', 'Present');
 
-// });
+});
 
 
 // const { test, expect } = require('@playwright/test');
