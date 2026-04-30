@@ -17,7 +17,7 @@ class LoginPage {
     await this.rememberMe.click();
     await this.loginBtn.click();
   }
-    async isLoginSuccessful() {
+  async isLoginSuccessful() {
     return await this.dashboardText.isVisible();
   }
 }

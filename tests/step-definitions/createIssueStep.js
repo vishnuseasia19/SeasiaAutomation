@@ -2,7 +2,7 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const LoginPage = require('../../pages/projectManagement/login.page.js');
 const UserProfilePage = require('../../pages/userProfile.page.js');
 const DashboardPage = require('../../pages/projectManagement/dashboard.page.js');
-const CreateIssuePage = require('../../pages/projectManagement/CreateIssue.page.js');
+const CreateIssuePage = require('../../pages/projectManagement/createIssue.page.js');
 
 Given('the user is on the login page', async function () {
   this.loginPage = new LoginPage(this.page);

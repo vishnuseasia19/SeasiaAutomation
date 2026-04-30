@@ -4,95 +4,69 @@
     "elements": [
       {
         "description": "",
-        "id": "create-issue;user-can-create-a-task-issue",
-        "keyword": "Scenario",
-        "line": 4,
-        "name": "User can create a task issue",
+        "id": "user-login;successful-login-with-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "Successful login with valid credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 681027599
+              "duration": 684181699
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 17,
             "name": "the user is on the login page",
             "match": {
-              "location": "tests\\step-definitions\\steps.js:7"
+              "location": "tests\\step-definitions\\createIssueStep.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 6971800399
+              "duration": 2861780500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
-            "name": "the user logs in with valid credentials",
+            "line": 18,
+            "name": "the user enters username \"4076\" and password \"Vishnu@1915\"",
             "match": {
-              "location": "tests\\step-definitions\\steps.js:12"
+              "location": "tests\\step-definitions\\loginSteps.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 4036702499
+              "duration": 195069099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
-            "name": "the user navigates to the project board",
+            "line": 19,
+            "name": "clicks on the login button",
             "match": {
-              "location": "tests\\step-definitions\\steps.js:21"
+              "location": "tests\\step-definitions\\loginSteps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 8022457199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "the user clicks on create issue",
-            "match": {
-              "location": "tests\\step-definitions\\steps.js:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3055459200
+              "duration": 195399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "the user fills in task details",
+            "line": 20,
+            "name": "the user should be redirected to the dashboard",
             "match": {
-              "location": "tests\\step-definitions\\steps.js:32"
+              "location": "tests\\step-definitions\\loginSteps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 22014509799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "the user cancels the issue creation",
-            "match": {
-              "location": "tests\\step-definitions\\steps.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1935535700
+              "duration": 13547975099
             }
           },
           {
@@ -100,106 +74,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 454283699
+              "duration": 397958099
             }
           }
         ],
         "tags": [
           {
-            "name": "@smoke",
-            "line": 3
+            "name": "@login",
+            "line": 15
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "create-issue",
-    "line": 1,
+    "id": "user-login",
+    "line": 13,
     "keyword": "Feature",
-    "name": "Create Issue",
+    "name": "User Login",
     "tags": [],
-    "uri": "tests\\feature\\createIssue.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "user-profile;user-login-and-view-profile",
-        "keyword": "Scenario",
-        "line": 4,
-        "name": "User login and view profile",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 679564299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "tests\\step-definitions\\steps.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4431396099
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "the user logs in with valid credentials",
-            "match": {
-              "location": "tests\\step-definitions\\steps.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 178657100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "the user profile page should be displayed",
-            "match": {
-              "location": "tests\\step-definitions\\steps.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 583956399
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 710503000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 3
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "user-profile",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "User Profile",
-    "tags": [],
-    "uri": "tests\\feature\\seasia.feature"
+    "uri": "tests\\feature\\login.feature"
   }
 ]
