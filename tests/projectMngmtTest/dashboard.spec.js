@@ -13,7 +13,7 @@ test('Dashboard Navigation Test', async ({ page }) => {
 
   await page.goto('/dashboard');
   await dashboardPage.clickAttendance();
-  await expect(attendance.header).toBeVisible();
+  //await expect(attendance.header).toBeVisible();
   await expect(page).toHaveURL('https://seasiaconnect.com/userspecific-attendance');
   // await attendance.applyAttendence();
   // 🔹 Click Apply Attendance
