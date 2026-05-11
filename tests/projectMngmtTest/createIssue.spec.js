@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const LoginPage = require('../../pages/projectManagement/login.page.js');
 const DashboardPage = require('../../pages/projectManagement/dashboard.page.js');
-const CreateIssuePage = require('../../pages/projectManagement/CreateIssue.page.js');
+const CreateIssuePage = require('../../pages/projectManagement/createIssue.page.js');
 
 test('Create Issue Test', async ({ page }) => {
 

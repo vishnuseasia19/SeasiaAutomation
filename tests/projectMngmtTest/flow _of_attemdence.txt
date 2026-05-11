@@ -1,0 +1,20 @@
+Login
+  ↓
+Navigate → User Attendance
+  ↓
+Verify Header "User Attendance"
+  ↓
+Select Year
+  ↓
+Select Month
+  ↓
+Wait for table refresh
+  ↓
+Validate Table Data
+  ↓
+Click "Apply For Attendance"
+  ↓
+Fill form → Submit
+  ↓
+Validate new row
+

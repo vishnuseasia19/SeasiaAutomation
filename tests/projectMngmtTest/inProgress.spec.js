@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 //const LoginPage = require('../../pages/login.page.js');
 const DashboardPage = require('../../pages/projectManagement/dashboard.page.js');
-const CreateIssuePage = require('../../pages/projectManagement/CreateIssue.page.js');
+const CreateIssuePage = require('../../pages/projectManagement/createIssue.page.js');
 const InProgressPage = require('../../pages/projectManagement/inProgress.page.js');
 //const { asyncWrapProviders } = require('node:async_hooks');
 
@@ -29,7 +29,7 @@ test('Task inProgress ', async({page})=>
 
   await expect(
   page.locator("//div[@data-rbd-droppable-id='In Progress']")
-      .locator('text=API testing (Playwright)')
+      .locator('text=jenkins')
 ).toBeVisible();
   // await inProgressPage.source.click();
   // await expect(inProgressPage.sprintBacklogBtn).toHaveText('In Progress');
@@ -45,7 +45,7 @@ test('Task inProgress ', async({page})=>
   //await page.mouse.click(50, 200);// click on top left side of page
 
 
-  await page.pause();
+  
 
 
 
