@@ -44,7 +44,7 @@ class attendancePage{
 
     // 🔹 Date Picker
     this.dateInput = page.locator("input[placeholder*='Date']");
-    this.dateButton = (day) => page.getByRole('button', { name: `${day}` });
+    this.dateButton = (day) => page.getByRole('button', { name: day.toString(), exact: true }).and(page.locator(':not([aria-disabled="true"])'));
 
     // 🔹 Work Location
     this.workLocationDropdown = page.getByRole('combobox', { name: 'Select Work Location' });

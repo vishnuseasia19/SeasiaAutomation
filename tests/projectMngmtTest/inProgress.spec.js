@@ -29,7 +29,7 @@ test('Task inProgress ', async({page})=>
 
   await expect(
   page.locator("//div[@data-rbd-droppable-id='In Progress']")
-      .locator('text=API testing (Playwright)')
+      .locator('text=jenkins')
 ).toBeVisible();
   // await inProgressPage.source.click();
   // await expect(inProgressPage.sprintBacklogBtn).toHaveText('In Progress');

@@ -16,7 +16,7 @@ test('attendancePage verification', async ({ page }) => {
   await attendancePage.navigateToAttendance();
 
   // Validate
-  await attendancePage.validateStatus('01 Apr, 2026', 'Present');
+  await attendancePage.validateStatus('01 May, 2026', 'Present');
 
 });
 
